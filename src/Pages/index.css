@@ -1,0 +1,20 @@
+.container{
+    width: 100vw;
+   }
+  .feedback{
+     margin-top: 35vh;
+    }
+    .buttons-opt{ 
+     display:grid;
+     height: 20vh;
+   
+     grid-template-columns: repeat(2, 1fr);
+     grid-template-rows: repeat(2, 1fr);
+     justify-content: space-evenly;
+     gap: 10px;
+     position: absolute;
+     left: 25%;
+     top: 40%;
+   }
+   
+   
