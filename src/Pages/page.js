@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import quizData from '../data/quizData.json';
-import ProgressBar from "../app/Components/ProgressBar/ProgressBar"
+import quizData from "../data/QuizData.json";
+import ProgressBar from "../app/Components/ProgressBar/progressBar"
 import ScoreBar from '../app/Components/ScoreBar/ScoreBar';
 import Button from '../app/Components/Button/Button';
 import Result from '../app/Components/Result/Result';
