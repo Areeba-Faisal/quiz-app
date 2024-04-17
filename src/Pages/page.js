@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import quizData from "../data/QuizData.json";
 import ProgressBar from "../app/Components/ProgressBar/progressBar"
 import ScoreBar from '../app/Components/ScoreBar/ScoreBar';
-import Button from '../app/Components/Button/Button';
 import Result from '../app/Components/Result/Result';
 import Star from '../app/Components/Star/Star';
 import OptionButton from "../app/Components/OptionButton/OptionButton"
@@ -125,7 +124,7 @@ const Quiz = () => {
                 currentQuestion={currentQuestionIndex + 1}
                 totalQuestions={totalQuestions}
               />
-            </div>
+            </div><br/>
             <div>
               <div className="mb-16">
                 <br/><br/>
@@ -177,11 +176,27 @@ const Quiz = () => {
                 )}
               </div>
               <div className="mt-4">
-                {selectedAnswer && (
-                  <Button onClick={handleNextQuestion} disabled={!selectedAnswer}>
-                    Next Question
-                  </Button>
-                )}
+              {selectedAnswer && (
+  <div className="text-center">
+    <OptionButton
+      answer="Next Question"
+      selectedAnswer={selectedAnswer}
+      onClick={handleNextQuestion}
+      customStyle={{
+        backgroundColor: '#d3d3d3',
+        color: '#fff',
+        padding: '10px 20px',
+        border: '1px solid black',
+        borderRadius: '5px',
+        cursor: selectedAnswer ? 'pointer' : 'not-allowed',
+        fontSize: '1rem',
+      }}
+      disabledCondition={!selectedAnswer}
+    />
+  </div>
+)}
+
+
               </div>
             </center>
             <div className="mt-4">
@@ -207,3 +222,9 @@ const Quiz = () => {
 };
 
 export default Quiz;
+
+
+
+
+
+

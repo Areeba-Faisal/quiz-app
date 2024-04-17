@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from '../Button/Button';
 
 const Result = ({ correctAnswers, totalQuestions, calculateScore, handleRestart }) => {
   return (
@@ -13,7 +12,14 @@ const Result = ({ correctAnswers, totalQuestions, calculateScore, handleRestart 
           {calculateScore() < 50 ? 'Sorry, You are Fail' : 'Congrats, You Passed'}
         </h2>
         <div className="mt-4">
-          <Button onClick={handleRestart}>Restart Quiz</Button>
+        <button
+  onClick={handleRestart}
+  className="bg-black hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+>
+  Restart Quiz
+</button>
+
+
         </div>
       </div>
     </div>
